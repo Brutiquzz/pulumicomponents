@@ -25,7 +25,7 @@ public class MyStorageAccount : ComponentResource
             Location = args.Location,
         };
 
-        var storageAccount = new StorageAccount(name, storageAccountArgs);
+        var storageAccount = new StorageAccount(name, storageAccountArgs, new CustomResourceOptions { Parent = this });
 
         StorageAccountId = storageAccount.Id;
 
